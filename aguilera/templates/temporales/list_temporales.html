@@ -7,12 +7,12 @@
     {%for el in temporales%}
       <div class="product">      
         <h3>{{el.nombre}}</h3>
+        <img src="{{el.imagen}}" alt="imagen de la propiedad">
         <p>Precio: ${{el.precio}} por noche</p>
         <p>Descripcion: {{el.descripcion}}</p>
         <p>Ambientes: {{el.ambientes}}</p>
         <p>Temporada: {{el.temporada}}</p>
           
-        <img src="{{el.imagen}}" alt="imagen de la propiedad">
       </div>
     {% endfor %}
   </div>  
