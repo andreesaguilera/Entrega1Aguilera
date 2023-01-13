@@ -1,0 +1,116 @@
+:root {  
+  --main-color: #161616;
+  --second-color: #6ee7b7;
+  --third-color: #7928ca;
+  --fourth-color: #e94f2d;
+  --main-bg: rgb(230, 196, 168);;  
+  --second-bg: #ebdfcf;  
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+  color: var(--main-color);  
+}
+
+html {
+  background-color: var(--main-bg);
+}
+
+h1 {
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center; 
+}
+
+/* HEADER */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;  
+  background-color: var(--second-bg);
+  border-radius: 0.5rem;
+  
+}
+
+header a {
+  margin-inline: 1rem;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+/* FORMULARIO */
+
+.formContainer {
+  width: 800px;  
+  margin: 0 auto;
+}
+
+.formContainer legend {
+  font-size: 1.2rem;  
+  text-align: center;
+  margin: 1em 0;
+}
+
+.formContainer .form-group {
+  width: 100%;  
+  display: grid;  
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.formContainer .form-group label {
+  grid-column: auto / span 3;
+  text-align: right;  
+}
+
+.formContainer .form-group input {
+  grid-column: auto / span 9;
+  width: 70%;  
+}
+
+.form-group button {
+  margin-top: 1rem;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  cursor: pointer !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-group button:hover {
+  transform: scale(1.1);
+}
+
+/* Product Containers */
+
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 0.5rem;
+}
+
+.productsContainer .product {
+  grid-column: auto / span 4;
+  border: 1px solid grey;  
+  padding: 1rem;  
+}
+
+.productsContainer .product h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin: 0.5rem 0;  
+}
+
+.productsContainer .product p {
+  margin: 0; 
+}
+
+.productsContainer .product img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;  
+}
+

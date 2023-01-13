@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block title %} Usuarios {% endblock %}
+{% block content %}
+<body>  
+  <h1>Usuarios</h1>
+  <div class="productsContainer">
+    {%for el in users%}
+      <div class="product">      
+        <h3>{{el.nombre}} {{el.apellido}}</h3>
+        <p>Edad: {{el.edad}} años</p>
+        <p>Email: {{el.email}}</p>
+        <p>Telefono: {{el.telefono}}</p>  
+      </div>
+    {% endfor %}
+  </div>    
+  {% endblock %}
+</body>
+  

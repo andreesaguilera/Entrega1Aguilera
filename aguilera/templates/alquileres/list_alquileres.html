@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %} Propiedades en Alquiler {% endblock %}
+{% block content %}
+<body>  
+  <h1>Propiedades en Alquiler</h1>
+  <div class="productsContainer">
+    {%for el in alquileres%}
+      <div class="product">      
+        <h3>{{el.nombre}}</h3>
+        <img src="{{el.imagen}}" alt="imagen de la propiedad">
+        <p>Precio: ${{el.precio}} mensual</p>
+        <p>Descripcion: {{el.descripcion}}</p>
+        <p>Ambientes: {{el.ambientes}}</p>  
+        <p>Paga Expensas: 
+          {% if el.expensas == True %}
+            Si
+          {% else %}
+            No
+          {% endif %}
+        </p>  
+      </div>
+    {% endfor %}
+  </div>  
+  <!-- link a crear Alquiler -->
+  <a href="/alquileres/create-alquiler">Crear Alquiler</a>  
+  {% endblock %}
+</body>
+  

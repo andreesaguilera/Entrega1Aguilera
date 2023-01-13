@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %} Usuarios {% endblock %}
+{% block content %}
+<body>
+  <h1>PRODUCTOS</h1>
+  <div class="productsContainer">
+    {%for el in products%}
+      <div class="product">      
+        <h3>{{el.nombre}}</h3>
+        <p>ID: {{el.id}}</p>
+        <p>Precio: ${{el.precio}}</p>
+        <p>Descripcion: {{el.descripcion}}</p>
+        <p>Stock: {{el.stock}}</p>
+      </div>
+    {% endfor %}
+  </div>
+  <div class="btnContainer">
+    <a href="/products/create-product/"><button class="addBtn">CREAR PRODUCTO</button></a>
+  </div>
+</body>
+{% endblock %}

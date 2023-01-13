@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %} Propiedades en Alquiler Temporal{% endblock %}
+{% block content %}
+<body>  
+  <h1>Propiedades en Alquiler Temporal</h1>
+  <div class="productsContainer">
+    {%for el in temporales%}
+      <div class="product">      
+        <h3>{{el.nombre}}</h3>
+        <p>Precio: ${{el.precio}} por noche</p>
+        <p>Descripcion: {{el.descripcion}}</p>
+        <p>Ambientes: {{el.ambientes}}</p>
+        <p>Temporada: {{el.temporada}}</p>
+          
+        <img src="{{el.imagen}}" alt="imagen de la propiedad">
+      </div>
+    {% endfor %}
+  </div>  
+  <!-- link a crear Alquiler -->
+  <a href="/temporales/create-temporal">Crear Alquiler</a>  
+  {% endblock %}
+</body>
+  
